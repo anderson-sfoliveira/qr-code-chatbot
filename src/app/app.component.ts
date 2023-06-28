@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'qr-code-chatbot';
+  // title = 'qr-code-chatbot';
+  titleApp = `${environment.titleApp}`;
+  bearer = `${environment.bearer}`;
+  channelName = `${environment.channelName}`;
 }
