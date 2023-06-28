@@ -8,8 +8,8 @@ require('dotenv').config();
 const environment = argv.environment;
 const isProduction = environment === 'prod';
 const targetPath = isProduction
-   ?  __dirname + `/src/app/environments/environment.prod.ts`
-   :  __dirname + `/src/app/environments/environment.ts`;
+   ?  __dirname + `/src/environments/environment.prod.ts`
+   :  __dirname + `/src/environments/environment.ts`;
 
 // we have access to our environment variables
 // in the process.env object thanks to dotenv
@@ -24,7 +24,7 @@ export const environment = {
 
 // create dir
 try {
-  mkdirSync(__dirname + `/src/app/environments`);
+  mkdirSync(__dirname + `/src/environments`);
 } catch (error) {
   console.log("Error: " + error);
 }
